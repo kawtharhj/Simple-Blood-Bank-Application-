@@ -2,6 +2,8 @@
 Simple Blood Bank Application built in Asp.net 6 core - razor pages
 
 The Website has 4 Pages:
+
+
 1- Home Page 
 ![Home](https://github.com/kawtharhj/Simple-Blood-Bank-Application-/assets/77617119/eb6e2479-6519-47bb-9615-ff5f916b1a41)
 
