@@ -1,0 +1,70 @@
+﻿@page
+@model BloodBank.Pages.Donors.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h1 style="color:indianred">Create </h1>
+
+<h4 style="color:indianred">Donor Application</h4>
+<hr />
+
+
+<div class="row">
+    
+    <div class="col-md-6" >
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Donor.Name" class="control-label" style="font-weight: bold; color: darkred;"></label>
+                <input asp-for="Donor.Name" class="form-control" placeholder="Optional" style="border: 1px solid darkred;" />
+                <span asp-validation-for="Donor.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.BloodGroup" class="control-label" style="font-weight: bold; color: darkred;"> </label>
+                <input asp-for="Donor.BloodGroup" class="form-control" placeholder="Ex: A+/A-" style="border: 1px solid darkred;" />
+                <span asp-validation-for="Donor.BloodGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.Phone" class="control-label" style="font-weight: bold; color: darkred;"></label>
+                <input asp-for="Donor.Phone" class="form-control" placeholder="With Country Code" style="border: 1px solid darkred;" />
+                <span asp-validation-for="Donor.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.Contact" class="control-label" style="font-weight: bold; color: darkred;"></label>
+                <input asp-for="Donor.Contact" class="form-control" placeholder="SMS/Call" style="border: 1px solid darkred;" />
+                <span asp-validation-for="Donor.Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.Country" class="control-label" style="font-weight: bold; color: darkred;"></label>
+                <input asp-for="Donor.Country" class="form-control" placeholder="Ex: Lebanon.." style="border: 1px solid darkred;" />
+                <span asp-validation-for="Donor.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.City" class="control-label" style="font-weight: bold; color: darkred;"></label>
+                <input asp-for="Donor.City" class="form-control" placeholder="Ex: Beirut.." style="border: 1px solid darkred;" />
+                <span asp-validation-for="Donor.City" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-outline-danger" />
+            </div>
+        </form>
+       
+    </div>
+    <div class="col-md-6">
+        <img src="~/Images/Donor.jpg" alt="Donor" class="img-fluid" width="400" height="300" style="margin: 30px;">
+    </div>
+</div>
+
+  
+
+
+<div>
+    <a asp-page="/Index" class="brick-link" >Back to Home Page</a>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

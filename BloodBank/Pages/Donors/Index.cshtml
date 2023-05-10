@@ -1,0 +1,98 @@
+﻿@page "{SearchCountry?}/{BloodGroup?}"
+@model BloodBank.Pages.Donors.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-danger">Donor List </h1>
+
+
+
+<p>
+    <a asp-page="Create" class="brick-link">Become A Donor Now</a>
+</p>
+
+
+<form method="get">
+
+    <label> <h6 >Search By Country</h6></label>
+    <div class="form-group">
+        <input type="text" class="form-control" asp-for="SearchCountry" placeholder="Enter Counter Name Starting with Capital Letter Ex:Lebanon" />
+    </div>
+    <label> <h6> Search By Blood Group </h6></label>
+    <div class="form-group">
+        <input type="text" class="form-control" asp-for="BloodGroup" placeholder="Ex: AB+ or A- " />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-outline-danger">Search</button>
+
+</form>
+
+
+
+
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr class="table-danger">
+            <th class="text-danger">
+                @Html.DisplayNameFor(model => model.Donor[0].Name)
+            </th>
+            <th class="text-danger">
+                @Html.DisplayNameFor(model => model.Donor[0].BloodGroup)
+            </th>
+            <th class="text-danger">
+                @Html.DisplayNameFor(model => model.Donor[0].Phone)
+            </th>
+            <th class="text-danger">
+                @Html.DisplayNameFor(model => model.Donor[0].Contact)
+            </th>
+            <th class="text-danger">
+                @Html.DisplayNameFor(model => model.Donor[0].Country)
+            </th>
+            <th class="text-danger">
+                @Html.DisplayNameFor(model => model.Donor[0].City)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var item in Model.Donor)
+        {
+            <tr>
+                <td >
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.BloodGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID" class="brick-link">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID" class="brick-link">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID" class="brick-link">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-page="/Pages/Index" class="brick-link">Back To Home Page</a>
+</p>

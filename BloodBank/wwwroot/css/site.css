@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+label {
+    color: #9E4321;
+}
+
+
+
+.brick-link {
+    color: #8B0000;
+}
+
+.bg-brown {
+    background-color: #9E4321; /* Replace with your desired brown color */
+}
+
+.custom-navbar-bg {
+    background-color: #ffdddd; /* Replace with your desired light red color */
+}
+
+    .custom-navbar-bg .navbar-nav .nav-link:hover {
+        background-color: #FF5151; /* Replace with your desired red color */
+        /* Replace with your desired text color */
+    }
+
+    .custom-navbar-bg .navbar-nav .nav-link {
+         /* Replace with your desired brown color */
+        font-weight: bold;
+    }

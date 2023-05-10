@@ -1,0 +1,60 @@
+﻿@page
+@model BloodBank.Pages.Donors.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Donor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Donor.ID" />
+            <div class="form-group">
+                <label asp-for="Donor.Name" class="control-label"></label>
+                <input asp-for="Donor.Name" class="form-control" />
+                <span asp-validation-for="Donor.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.BloodGroup" class="control-label"></label>
+                <input asp-for="Donor.BloodGroup" class="form-control" />
+                <span asp-validation-for="Donor.BloodGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.Phone" class="control-label"></label>
+                <input asp-for="Donor.Phone" class="form-control" />
+                <span asp-validation-for="Donor.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.Contact" class="control-label"></label>
+                <input asp-for="Donor.Contact" class="form-control" />
+                <span asp-validation-for="Donor.Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.Country" class="control-label"></label>
+                <input asp-for="Donor.Country" class="form-control" />
+                <span asp-validation-for="Donor.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Donor.City" class="control-label"></label>
+                <input asp-for="Donor.City" class="form-control" />
+                <span asp-validation-for="Donor.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

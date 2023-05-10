@@ -1,0 +1,49 @@
+﻿@page
+@model BloodBank.Pages.ContactModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request for Assistance</title>
+</head>
+<body>
+  <h2 class="text-danger">Submit Email Request for Assistance</h2>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" >
+                <div class="form-group">
+                    <label class="control-label" style="font-weight: bold; color: darkred;"> Your name:</label>
+                    <input type="text" name="name" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" style="font-weight: bold; color: darkred;"> Email Address</label>
+                    <input type="email" name="email" required class="form-control" />
+                 </div>
+
+                <div class="form-group">
+                  <label class="control-label" style="font-weight: bold; color: darkred;"> Subject Title</label>
+                    <input type="text" name="subject" class="form-control" />
+                </div>
+            
+                 <div class="form-group">
+                   <label class="control-label" style="font-weight: bold; color: darkred;"> Details About Your Problem</label>
+                     <br />
+        <textarea name="message" cols="45" rows="4"  required ></textarea>
+                 </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-outline-danger" />
+                 </div>
+         </form>
+    </div>
+        <div class="col-md-6">
+            <img src="~/Images/mobile.jpg" alt="Mobile" class="img-fluid" width="400" height="300" style="margin: 30px;">
+        </div>
+  </div>
+</body>
+</html>
