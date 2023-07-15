@@ -1,5 +1,5 @@
 # Simple-Blood-Bank-Application-
-Simple Blood Bank Application built in Asp.net 6 core - razor pages
+Simple Blood Bank Application built in Asp.net 6 core - razor pages using scaffolding
 
 The Website has 4 Pages:
 
